@@ -1,33 +1,24 @@
+/* styles/globals.css */
+
+/* Importing Tailwind CSS styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Custom global styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Roboto', sans-serif; /* Use your preferred font */
+  background-color: #f7fafc; /* Light gray background */
+  color: #374151; /* Dark gray text color */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  color: #4f46e5; /* Link color */
+  transition: color 0.3s ease; /* Smooth transition on hover */
 }
+
+a:hover {
+  color: #805ad5; /* Darker link color on hover */
+}
+
+/* Add any additional global styles here */
