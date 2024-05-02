@@ -1,16 +1,17 @@
-import { MongoClient } from "mongodb";
+import { MongoClient } from 'mongodb';
 import { NextResponse } from 'next/server';
 
-export async function PUT(request){
+export async function PUT(request) {
   let client;
 
   try {
     const requestData = await request.json();
     const { productId, updatedProductData } = requestData;
 
-    console.log("Received data:", productId, updatedProductData);
+    console.log('Received data:', productId, updatedProductData);
 
-    const uri = "mongodb+srv://karthicloud6:karthicloud6@cluster0.rcyerif.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    const uri =
+      'mongodb+srv://karthicloud6:karthicloud6@cluster0.rcyerif.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
     client = new MongoClient(uri);
     await client.connect();
     const database = client.db('products');
@@ -39,3 +40,4 @@ export async function PUT(request){
     }
   }
 }
+
